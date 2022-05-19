@@ -11,6 +11,9 @@ class UsersController < ApplicationController
         @user = User.new user_params
     end
 
+    def show
+
+    end
 
     private
     def user_params
