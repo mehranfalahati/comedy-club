@@ -2,9 +2,14 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
+/* -------------------------- Brand Colours --------------------*/
 $teal: #CEE7E6;
 $mustard: #D7BE39;
 $grey: #C4C4C4;
+$ltGrey: #E3E3E3;
+
+
 
 body {
     margin: 0;
@@ -40,22 +45,6 @@ body {
     padding: 30vh;
 }
 
-.list-user {
-    width: 70vw;
-    margin: 0 auto;
-    border: 3px solid rgb(0, 0, 0);
-}
-
-.heading {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    font-weight: bold;
-}
-
-.user-index {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-}
 
 /* -------------------- subscribe --------------------------*/
 
@@ -149,9 +138,69 @@ p {
     max-width: 120px;
 }
 
-/* -------------------- DB --------------------------*/
+/* -------------------- Dashboard --------------------------*/
+
+
+.index-container {
+    width: 70vw;
+    margin: 0 auto;
+}
+
+.list-user {
+    border: 3px solid rgb(0, 0, 0);
+}
+
+@mixin grid { /* made this a mixin cause heading & data need to be consistent */
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.user-index {
+    @include grid;
+    background-color: $ltGrey;
+    padding: 0 20px;
+}
 
 .heading {
+    @include grid;
+    font-weight: bold;
     background-color: $grey;
     padding: 0 20px;
+}
+
+@mixin box {
+    padding-top: 50px;
+    text-align: center;
+    width: 220px;
+    background-color: $grey;
+    box-sizing: border-box;
+    margin: 20px;
+    height: 220px;
+}
+
+.count {
+    @include box;
+    
+}
+
+.dash {
+    background-color: $ltGrey;
+    display: flex;
+    justify-content: left;
+
+}
+
+.new-email { /* keeping this seperate from count - need to check if this needs to be diff height */
+    @include box;
+
+}
+
+.dash-back {
+    background-color: $teal;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
 }
