@@ -9,7 +9,7 @@
             </div>
 
             <div class="new-email">
-                <h2>New</h2>
+                <h2 title="New email subscriptions today">New</h2>
                 <% new_email = 0 %>
                 <% @users.each do |user| %>
                     <% unless user.created_at === Date.today %>
@@ -17,7 +17,7 @@
                     <% end%>
                 <% end %>
 
-                <h2><%= new_email %></h2>
+                <h2 title="New email subscriptions today"><%= new_email %></h2>
             </div>
         </div>
 

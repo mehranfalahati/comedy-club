@@ -105,37 +105,40 @@ body {
    padding: 1%;
    box-sizing: border-box;
    width: 100vw;
-   justify-content: center;
-    align-items: center;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-around;
+
 }
 
-.box-left {
-    margin-left: 4%;
-   width: 22%;
-   float: left;
-   justify-content: center;
-    align-items: center;
+/* --need to look into grid and repeat(auto-fit)-*/
+
+.box a {
+    display: block;
+    margin: 15px 0;
+    text-decoration: none;
+    color: black;
 }
-.box-right {
-    margin-right: 4%;
-   width: 22%;
-   float: left;
-   justify-content: center;
-    align-items: center;
-}
-.box-center {
-    width: 24%;
-    float: left;
-}
+
 p {
     font-size: 15px;
 }
+
 .footer-logo {
     margin-top: 40px;
     margin-left: 90px;
 }
+
 .medium-logo {
     max-width: 120px;
+}
+
+.inline img, p {
+    display: inline-block;
+}
+
+#email-address {
+    text-decoration: underline;
 }
 
 /* -------------------- Dashboard --------------------------*/
