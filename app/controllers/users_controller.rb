@@ -10,7 +10,8 @@ class UsersController < ApplicationController
     def create 
         user = User.create user_params
         user.save
-        redirect_to users_path
+        redirect_to root_path
+        flash[:message] = 'Thank you for joining our club'
     end
 
     def show
