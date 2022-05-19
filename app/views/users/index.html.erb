@@ -1,6 +1,11 @@
 <h1>Users Dashboard</h1>
 
 
+<div class="count">
+<h2>Total Subscribers</h2>
+    <%= @users.count %>
+</div>
+
 <div class="list-user">
 
     <div class="heading">
@@ -12,7 +17,7 @@
 
     <% @users.order(:id).each do |user| %>
         <div class="user-index">
-            <p> <%= user.id %> </p>
+            <p><%= user.id %></p>
             <p><%= user.first_name %></p>
             <p><%= user.last_name %></p>
             <p><%= user.email %> </p>
