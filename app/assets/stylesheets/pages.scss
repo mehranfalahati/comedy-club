@@ -4,6 +4,7 @@
 
 body {
     margin: 0;
+    
 }
 
 .image {
@@ -50,4 +51,46 @@ body {
 .user-index {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8f8ff;
+}
+.container {
+   padding: 1%;
+   box-sizing: border-box;
+   width: 100vw;
+   justify-content: center;
+    align-items: center;
+}
+
+.box-left {
+    margin-left: 4%;
+   width: 22%;
+   float: left;
+   justify-content: center;
+    align-items: center;
+}
+.box-right {
+    margin-right: 4%;
+   width: 22%;
+   float: left;
+   justify-content: center;
+    align-items: center;
+}
+.box-center {
+    width: 24%;
+    float: left;
+}
+p {
+    font-size: 15px;
+}
+.footer-logo {
+    margin-top: 40px;
+    margin-left: 90px;
+}
+.medium-logo {
+    max-width: 120px;
 }

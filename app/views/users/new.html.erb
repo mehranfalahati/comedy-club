@@ -33,10 +33,22 @@
 <% end %>
 
 
-      <% if flash[:message].present? %>
+    <% if flash[:message].present? %>
 
-        <div class="flash">
-            <%= flash[:message] %>
-        </div>
+    <div class="flash">
+        <%= flash[:message] %>
+    </div>
 
-        <% end %>
+    <% end %>
+
+    <% if @user.errors.any? %>
+
+        <% @user.errors.full_messages.each do |msg| %>
+            <p> <%= msg %> </p>
+        <% end%>
+
+    <% end %>
+
+<div class="footer">
+    <%= render :partial => 'footer'%>
+</div>
