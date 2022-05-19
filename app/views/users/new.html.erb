@@ -31,3 +31,12 @@
     <%= f.submit "Sign Up" %>
 
 <% end %>
+
+
+      <% if flash[:message].present? %>
+
+        <div class="flash">
+            <%= flash[:message] %>
+        </div>
+
+        <% end %>

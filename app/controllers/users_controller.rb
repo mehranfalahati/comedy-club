@@ -8,9 +8,13 @@ class UsersController < ApplicationController
     end
 
     def create 
-        user = User.create user_params
-        user.save
-        redirect_to users_path
+        @user = User.create user_params
+        if @user.save
+            flash[:message] = " ✔️ Thank you for signing up!"
+            redirect_to root_path
+        else
+            render :new
+        end
     end
 
     def show
