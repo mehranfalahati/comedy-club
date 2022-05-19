@@ -16,21 +16,35 @@
     </div>
     
 </div>
+<div class="subscribe">
 
-<%= form_for @user do |f| %>
+    <div>
+        <h1>Subscribe!</h1>
+        <h3>Be the first to know about all the sh*ts and gigs</h3>
+        <p>No spam, we promise! All killer, no fill </p>
 
-    <%= f.label :first_name %>
-    <%= f.text_field :first_name, :required => true %>
+    </div>
 
-    <%= f.label :last_name %>
-    <%= f.text_field :last_name, :required => true %>
+    <div class="elephant">
+        <img src="../../assets/elephant.png" alt="elephant balancing on ball comedy store">    
+    </div>
 
-    <%= f.label :email %>
-    <%= f.email_field :email, :required => true %>
-    
-    <%= f.submit "Sign Up" %>
+    <div class="form">
 
-<% end %>
+        <%= form_for @user do |f| %>
+
+            <%= f.text_field :first_name, :required => true, :placeholder => "First Name*" %>
+
+            <%= f.text_field :last_name, :required => true, :placeholder => "Last Name*" %>
+
+            <%= f.email_field :email, :required => true, :class => "email_output"%>
+            
+            <%= f.submit "Sign Up" %>
+
+        <% end %>
+    </div>
+
+</div>
 
 
     <% if flash[:message].present? %>

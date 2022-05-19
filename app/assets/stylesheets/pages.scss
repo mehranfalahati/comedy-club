@@ -52,6 +52,25 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
 }
+
+/* -------------------- subscribe --------------------------*/
+
+.subscribe {
+    height: 40vh;
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(176, 176, 176);
+}
+
+.elephant img {
+    height: 70%;
+}
+
+.email_output {
+    display: block;
+}
+
+/* -------------------- footer --------------------------*/
 .footer {
     display: flex;
     justify-content: center;
