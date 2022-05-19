@@ -35,3 +35,19 @@ body {
     padding: 30vh;
 }
 
+.list-user {
+    width: 70vw;
+    margin: 0 auto;
+    border: 3px solid rgb(0, 0, 0);
+}
+
+.heading {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    font-weight: bold;
+}
+
+.user-index {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}

@@ -1,3 +1,29 @@
-<h1>Users#index</h1>
-<p>Find me in app/views/users/index.html.erb</p>
+<h1>Users Dashboard</h1>
+
+
+<div class="count">
+<h2>Total Subscribers</h2>
+    <%= @users.count %>
+</div>
+
+<div class="list-user">
+
+    <div class="heading">
+        <p>user ID</p>
+        <p>First Name</p>
+        <p>Last Name</p>
+        <p>Email</p>
+    </div>
+
+    <% @users.order(:id).each do |user| %>
+        <div class="user-index">
+            <p><%= user.id %></p>
+            <p><%= user.first_name %></p>
+            <p><%= user.last_name %></p>
+            <p><%= user.email %> </p>
+        </div>
+
+    <% end %>
+
+</div>
 

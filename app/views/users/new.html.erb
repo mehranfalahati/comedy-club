@@ -1,16 +1,32 @@
-<h1>Users#new</h1>
-<p>Find me in app/views/users/new.html.erb</p>
+<div class="image">
+
+
+
+</div>
+
+
+<div class="about">
+
+    <img src="../../assets/logo.jpg" alt="comedy store logo">
+    
+    <div class="about-text">
+        <h1>Why visit the Comedy Store</h1>
+
+        <h3>[enter witty text] </h3>
+    </div>
+    
+</div>
 
 <%= form_for @user do |f| %>
 
     <%= f.label :first_name %>
-    <%= f.text_field :first_name %>
+    <%= f.text_field :first_name, :required => true %>
 
     <%= f.label :last_name %>
-    <%= f.text_field :last_name %>
+    <%= f.text_field :last_name, :required => true %>
 
     <%= f.label :email %>
-    <%= f.email_field :email %>
+    <%= f.email_field :email, :required => true %>
     
     <%= f.submit "Sign Up" %>
 
