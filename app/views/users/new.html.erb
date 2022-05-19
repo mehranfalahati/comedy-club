@@ -16,31 +16,40 @@
     </div>
     
 </div>
-<div class="subscribe">
+<div class="subscribe-container">
 
-    <div>
-        <h1>Subscribe!</h1>
-        <h3>Be the first to know about all the sh*ts and gigs</h3>
-        <p>No spam, we promise! All killer, no fill </p>
+    <div class="subscribe">
+        <div>
+            <h1>Subscribe!</h1>
+            <h5>Be the first to know about all the sh*ts and gigs</h5>
+            <p>No spam, we promise! All killer, no fill </p>
+        </div>
+
 
     </div>
 
-    <div class="elephant">
         <img src="../../assets/elephant.png" alt="elephant balancing on ball comedy store">    
-    </div>
 
     <div class="form">
-
         <%= form_for @user do |f| %>
 
-            <%= f.text_field :first_name, :required => true, :placeholder => "First Name*" %>
+        <div class="form-input">
+            <div class="form-top">
 
-            <%= f.text_field :last_name, :required => true, :placeholder => "Last Name*" %>
+                <%= f.text_field :first_name, :required => true, :placeholder => "First Name*" %>
 
-            <%= f.email_field :email, :required => true, :class => "email_output"%>
+                <%= f.text_field :last_name, :required => true, :placeholder => "Last Name*" %>
+
+            </div>
+
+            <%= f.email_field :email, :required => true, :placeholder => "Email*", :class => "email_output"%>
             
-            <%= f.submit "Sign Up" %>
+        </div>
 
+        <div class="sign-up">
+            <%= f.submit "Sign Up", :id => "submit" %>
+        </div>
+        
         <% end %>
     </div>
 
