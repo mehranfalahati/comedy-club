@@ -97,9 +97,10 @@ body {
 /* -------------------- footer --------------------------*/
 .footer {
     display: flex;
+    background-color: #f8f8ff;
     justify-content: center;
     align-items: center;
-    background-color: #f8f8ff;
+
 }
 .container {
    padding: 1%;
@@ -110,6 +111,8 @@ body {
    justify-content: space-around;
 
 }
+
+
 
 /* --need to look into grid and repeat(auto-fit)-*/
 
@@ -208,9 +211,8 @@ p {
 
 .dash-back {
     background-color: $teal;
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
+        // width: 100vw;
+        // height: 100vh;
     top: 0;
     left: 0;
 }
