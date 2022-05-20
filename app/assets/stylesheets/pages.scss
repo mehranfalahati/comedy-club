@@ -216,3 +216,36 @@ p {
     top: 0;
     left: 0;
 }
+
+
+@media (max-width: 500px) {
+    .image {
+        // background-color: blue;
+        background-image: url(assets/mobile1.jpg);
+        background-size: cover;
+    }
+
+    .about {
+        height: 35vh;
+        // width: 50px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        background-color: $teal;
+        text-align: center;
+    }
+
+    .about img {
+        height: 200px;
+        padding-left: 18%;
+    }
+
+    .about-text {
+        padding: 1vh;
+
+    }
+    .about h1 {
+        font-size: 20px;
+        text-align: center;
+    }
+}
