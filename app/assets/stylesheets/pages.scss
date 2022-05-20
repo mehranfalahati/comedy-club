@@ -14,7 +14,7 @@ $valid: #CFFF9F;
 
 body {
     margin: 0;
-    background-color: $teal;
+
 }
 
 .image {
@@ -210,7 +210,7 @@ p {
     padding-top: 50px;
     text-align: center;
     width: 220px;
-    background-color: $grey;
+    background-color: #F4F4F4;
     box-sizing: border-box;
     margin: 20px;
     height: 220px;
@@ -222,10 +222,9 @@ p {
 }
 
 .dash {
-    background-color: $ltGrey;
+    background-color: $teal;
     display: flex;
     justify-content: left;
-
 }
 
 .new-email { /* keeping this seperate from count - need to check if this needs to be diff height */

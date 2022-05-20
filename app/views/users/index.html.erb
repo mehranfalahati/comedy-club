@@ -9,7 +9,7 @@
             </div>
 
             <div class="new-email">
-                <h2 title="New email subscriptions today">New</h2>
+                <h2 title="New email subscriptions today">New [Today] </h2>
                 <% new_email = 0 %>
                 <% @usersAll.each do |user| %>
                     <% if user.created_at > Date.today %>
