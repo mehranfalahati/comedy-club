@@ -1,29 +1,50 @@
-<h1>Users Dashboard</h1>
+<div class="dash-back">
+    <div class="index-container">
+        <h1>Email Dashboard</h1>
 
+        <div class="dash">
+            <div class="count">
+                <h2>Total Subscribers</h2>
+                <h2><%= @users.count %></h2>
+            </div>
 
-<div class="count">
-<h2>Total Subscribers</h2>
-    <%= @users.count %>
-</div>
+            <div class="new-email">
+                <h2 title="New email subscriptions today">New</h2>
+                <% new_email = 0 %>
+                <%=  Date.today %>
+                <% @users.each do |user| %>
+                    <% if user.created_at === Date.today %>
+                        <% new_email += 1 %>
+                    <% end%>
+                <% end %>
 
-<div class="list-user">
-
-    <div class="heading">
-        <p>user ID</p>
-        <p>First Name</p>
-        <p>Last Name</p>
-        <p>Email</p>
-    </div>
-
-    <% @users.order(:id).each do |user| %>
-        <div class="user-index">
-            <p><%= user.id %></p>
-            <p><%= user.first_name %></p>
-            <p><%= user.last_name %></p>
-            <p><%= user.email %> </p>
+                <h2 title="New email subscriptions today"><%= new_email %></h2>
+            </div>
         </div>
 
-    <% end %>
+
+        <h1>Email Recipients</h1>
+        <div class="list-user">
+
+            <div class="heading">
+                <p>Select</p>
+                <p>First Name</p>
+                <p>Last Name</p>
+                <p>Email</p>
+            </div>
+
+            <% @users.order(:id).each do |user| %>
+                <div class="user-index">
+                    <p><%= check_box_tag user.id  %> <%= user.created_at %></p>
+                    <p><%= user.first_name %></p>
+                    <p><%= user.last_name %></p>
+                    <p><%= user.email %> </p>
+                </div>
+
+            <% end %>
+
+        </div>
+
+    </div>
 
 </div>
-

@@ -2,6 +2,15 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
+/* -------------------------- Brand Colours --------------------*/
+$teal: #CEE7E6;
+$mustard: #D7BE39;
+$grey: #C4C4C4;
+$ltGrey: #E3E3E3;
+
+
+
 body {
     margin: 0;
     
@@ -20,7 +29,7 @@ body {
     height: 60vh;
     display: flex;
     justify-content: space-around;
-    background-color: #CEE7E6;
+    background-color: $teal;
 }
 
 .logo img {
@@ -36,22 +45,56 @@ body {
     padding: 30vh;
 }
 
-.list-user {
-    width: 70vw;
-    margin: 0 auto;
-    border: 3px solid rgb(0, 0, 0);
+
+/* -------------------- subscribe --------------------------*/
+
+.subscribe-container {
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    padding: 60px;
+    box-sizing: border-box;
+    font-size: 150%;
 }
 
-.heading {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    font-weight: bold;
+
+.subscribe {
+    display: flex;
 }
 
-.user-index {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+.elephant img {
+    height: 50%;
 }
+
+.email_output {
+    display: block;
+    width: 94%;
+}
+
+.form input {
+    padding: 10px;
+    border-radius: 5px;
+    margin: 5px;
+    background-color: $teal;
+    font-size: 70%;
+}
+
+#submit {
+    background-color: $mustard;
+}
+
+.form {
+
+    display: flex;
+    justify-content: center;
+}
+
+
+
+/* -------------------- footer --------------------------*/
 .footer {
     display: flex;
     background-color: #f8f8ff;
@@ -75,14 +118,112 @@ body {
 .box-center {
     width: 24%;
     float: left;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-around;
+
 }
+
+/* --need to look into grid and repeat(auto-fit)-*/
+
+.box a {
+    display: block;
+    margin: 15px 0;
+    text-decoration: none;
+    color: black;
+}
+
 p {
     font-size: 15px;
 }
+
 .footer-logo {
     margin-top: 40px;
     margin-left: 90px;
 }
+
 .medium-logo {
     max-width: 120px;
+}
+
+.inline img, p {
+    display: inline-block;
+}
+
+#email-address {
+    text-decoration: underline;
+}
+
+#connection a {
+    display: inline-block;
+    margin: 5px;
+}
+
+
+
+/* -------------------- Dashboard --------------------------*/
+
+
+.index-container {
+    width: 70vw;
+    margin: 0 auto;
+}
+
+.list-user {
+    border: 3px solid rgb(0, 0, 0);
+}
+
+@mixin grid { /* made this a mixin cause heading & data need to be consistent */
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.user-index {
+    @include grid;
+    background-color: $ltGrey;
+    padding: 0 20px;
+}
+
+.heading {
+    @include grid;
+    font-weight: bold;
+    background-color: $grey;
+    padding: 0 20px;
+}
+
+@mixin box {
+    padding-top: 50px;
+    text-align: center;
+    width: 220px;
+    background-color: $grey;
+    box-sizing: border-box;
+    margin: 20px;
+    height: 220px;
+}
+
+.count {
+    @include box;
+    
+}
+
+.dash {
+    background-color: $ltGrey;
+    display: flex;
+    justify-content: left;
+
+}
+
+.new-email { /* keeping this seperate from count - need to check if this needs to be diff height */
+    @include box;
+
+}
+
+.dash-back {
+    background-color: $teal;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
 }

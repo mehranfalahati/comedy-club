@@ -1,0 +1,9 @@
+<%= search_form_for @query do |f| %>
+    <div class="search-container">
+    <%= f.search_field :user_first_name_i_cont_any, 
+    :placeholder => 'Search  ...        ...  [press Enter]', :class => "search-input"%>
+        <div class="search">
+            <%= f.submit %>
+        </div>
+    </div>
+<% end %>
