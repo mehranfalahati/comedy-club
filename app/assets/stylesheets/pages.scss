@@ -275,12 +275,10 @@ p {
         min-height: 200px;
         margin-left: 30px;
     }
- 
-    
 }
 
 
-@media (max-width: 500px) {
+@media (max-width: 700px) {
     .image {
         // background-color: blue;
         background-image: image-url("mobile1.jpg");
@@ -288,7 +286,7 @@ p {
     }
 
     .about {
-        height: 35vh;
+        height: 40vh;
         // width: 50px;
         display: flex;
         flex-wrap: wrap;
@@ -297,14 +295,14 @@ p {
         text-align: center;
     }
 
-    .about img {
-        height: 230px;
+    .about-img {
+        height: 250px;
         padding-left: 24%;
     }
 
     .about-text {
         padding: 1vh;
-        margin-left: 100px;
+        margin-left: 24%;
 
     }
     .about h1 {
