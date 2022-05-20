@@ -98,31 +98,21 @@ body {
 .footer {
     display: flex;
     background-color: #f8f8ff;
+    justify-content: center;
+    align-items: center;
+
 }
 .container {
    padding: 1%;
    box-sizing: border-box;
    width: 100vw;
-}
-
-.box-left {
-    margin-left: 4%;
-   width: 22%;
-   float: left;
-}
-.box-right {
-    margin-right: 4%;
-   width: 22%;
-   float: left;
-}
-.box-center {
-    width: 24%;
-    float: left;
    display: flex;
    flex-wrap: wrap;
    justify-content: space-around;
-
+   
 }
+
+
 
 /* --need to look into grid and repeat(auto-fit)-*/
 
