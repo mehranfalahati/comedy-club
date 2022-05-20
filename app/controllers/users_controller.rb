@@ -3,6 +3,7 @@ class UsersController < ApplicationController
         @users = User.all
         @query = User.ransack(params[:q])
         @users = @query.result(:distinct => true)
+        @users = User.paginate(page:params[:page])
     end
 
     def new
