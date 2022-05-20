@@ -8,7 +8,8 @@ $teal: #CEE7E6;
 $mustard: #D7BE39;
 $grey: #C4C4C4;
 $ltGrey: #E3E3E3;
-
+$invalid: #FF8F8F;
+$valid: #CFFF9F;
 
 
 body {
@@ -49,14 +50,16 @@ body {
 /* -------------------- subscribe --------------------------*/
 
 .subscribe-container {
-    height: 40vh;
+
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     background-color: rgb(0, 0, 0);
     color: white;
     padding: 60px;
     box-sizing: border-box;
     font-size: 150%;
+    font-family: sans-serif;
 }
 
 
@@ -65,13 +68,14 @@ body {
 }
 
 
-.elephant img {
-    height: 50%;
+#elephant {
+    height: 200px;
 }
+
+
 
 .email_output {
     display: block;
-    width: 94%;
 }
 
 .form input {
@@ -80,6 +84,7 @@ body {
     margin: 5px;
     background-color: $teal;
     font-size: 70%;
+    box-sizing: border-box;
 }
 
 #submit {
@@ -92,6 +97,24 @@ body {
     justify-content: center;
 }
 
+@mixin messages {
+    box-sizing: border-box;
+    padding: 20px;
+    border-radius: 5px;
+    color: black;
+    font-size: large;
+}
+
+.error {
+    @include messages;
+    background-color: $invalid;
+
+}
+
+.flash {
+    @include messages;
+    background-color: $valid;
+}
 
 
 /* -------------------- footer --------------------------*/
@@ -209,3 +232,64 @@ p {
 
 }
 
+@media only screen and (max-width: 600px ) {
+    .form input {
+        display: block;
+        width: 380px;
+        box-sizing: border-box;
+        margin: 15px 0;
+    }
+
+    .error {
+        width: 380px;
+    }
+    
+}
+
+
+@media only screen and (min-width: 600px ) {
+    .email_output {
+        display: block;
+        width: 98%;
+    }
+
+    .error, .flash {
+        width: 98%;
+    }
+
+ 
+    
+}
+
+
+@media (max-width: 500px) {
+    .image {
+        // background-color: blue;
+        background-image: url(assets/mobile1.jpg);
+        background-size: cover;
+    }
+
+    .about {
+        height: 35vh;
+        // width: 50px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        background-color: $teal;
+        text-align: center;
+    }
+
+    .about img {
+        height: 200px;
+        padding-left: 18%;
+    }
+
+    .about-text {
+        padding: 1vh;
+
+    }
+    .about h1 {
+        font-size: 20px;
+        text-align: center;
+    }
+}
