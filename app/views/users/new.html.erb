@@ -21,14 +21,14 @@
     <div class="subscribe">
         <div>
             <h1>Subscribe!</h1>
-            <h5>Be the first to know about all the sh*ts and gigs</h5>
+            <div class="secondary">Be the first to know about all the sh*ts and gigs</div>
             <p>No spam, we promise! All killer, no filler </p>
         </div>
 
 
     </div>
 
-        <img src="../../assets/elephant.png" alt="elephant balancing on ball comedy store">    
+        <img src="../../assets/elephant.png" alt="elephant balancing on ball comedy store" id="elephant">    
 
     <div class="form">
         <%= form_for @user do |f| %>
@@ -48,26 +48,25 @@
         </div>
 
 
-    <% if flash[:message].present? %>
-
-    <div class="flash">
-        <%= flash[:message] %>
-    </div>
-
-    <% end %>
-
-    <% if @user.errors.any? %>
-
-        <% @user.errors.full_messages.each do |msg| %>
-            <p> <%= msg %> </p>
-        <% end%>
-
-    <% end %>
-    
-        
         <div class="sign-up">
             <%= f.submit "Sign Up", :id => "submit" %>
         </div>
+
+        <% if flash[:message].present? %>
+
+            <p class="flash">
+                <%= flash[:message] %>
+            </p>
+
+        <% end %>
+
+        <% if @user.errors.any? %>
+
+            <% @user.errors.full_messages.each do |msg| %>
+                <p class="error"> <%= msg %> </p>
+            <% end%>
+
+        <% end %>
 
         <% end %>
     </div>

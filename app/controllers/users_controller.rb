@@ -13,7 +13,7 @@ class UsersController < ApplicationController
     def create 
         @user = User.create user_params
         if @user.save
-            flash[:message] = " ✔️ Thank you for subscribing"
+            flash[:message] = " You're in! Prepare yourself for some body aching laughs"
             redirect_to root_path
         else
             render :new
