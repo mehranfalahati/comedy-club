@@ -1,8 +1,9 @@
 class UsersController < ApplicationController
     def index
         @users = User.all
-        # @query = User.ransack(params[:q])
-        # @users = @query.result(:distinct => true)
+        @query = User.ransack(params[:q])
+        @users = @query.result(:distinct => true)
+        @users = User.paginate(page:params[:page])
     end
 
     def new
