@@ -245,6 +245,8 @@ p {
     .box {
         display:block;
         width: 380px;
+        box-sizing: border-box;
+        min-height: 200px;
     }
     
 }
@@ -260,6 +262,13 @@ p {
         width: 98%;
     }
 
+    .box {
+        display:block;
+        width: 380px;
+        box-sizing: border-box;
+        min-height: 200px;
+        margin-left: 30px;
+    }
  
     
 }
