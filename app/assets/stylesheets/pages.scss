@@ -17,8 +17,8 @@ body {
 }
 
 .image {
-    // background-color: blue;
-    background-image: url(/assets/home.png);
+    background-color: blue;
+    background-image: image-url("home.png");
     width: 100vw;
     height: 90vh;
     background-size: cover;
@@ -42,7 +42,7 @@ body {
 }
 
 .about-text {
-    padding: 30vh;
+    padding: 30px;
 }
 
 
