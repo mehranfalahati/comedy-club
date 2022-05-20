@@ -13,7 +13,7 @@ $ltGrey: #E3E3E3;
 
 body {
     margin: 0;
-    
+    background-color: $teal;
 }
 
 .image {
@@ -158,10 +158,10 @@ p {
 
 .list-user {
     border: 3px solid rgb(0, 0, 0);
+    margin-bottom: 10vh;
 }
 
 @mixin grid { /* made this a mixin cause heading & data need to be consistent */
-    box-sizing: border-box;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
 }
@@ -206,11 +206,3 @@ p {
 
 }
 
-.dash-back {
-    background-color: $teal;
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
-}
