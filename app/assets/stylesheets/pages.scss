@@ -281,8 +281,8 @@ p {
 
 @media (max-width: 500px) {
     .image {
-
-        background-image: url(assets/mobile1.jpg);
+        // background-color: blue;
+        background-image: image-url("mobile1.jpg");
         background-size: cover;
     }
 
@@ -297,12 +297,13 @@ p {
     }
 
     .about img {
-        height: 200px;
-        padding-left: 18%;
+        height: 230px;
+        padding-left: 24%;
     }
 
     .about-text {
         padding: 1vh;
+        margin-left: 100px;
 
     }
     .about h1 {
