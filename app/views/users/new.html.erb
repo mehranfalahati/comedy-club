@@ -22,7 +22,7 @@
         <div>
             <h1>Subscribe!</h1>
             <h5>Be the first to know about all the sh*ts and gigs</h5>
-            <p>No spam, we promise! All killer, no fill </p>
+            <p>No spam, we promise! All killer, no filler </p>
         </div>
 
 
@@ -40,20 +40,12 @@
 
                 <%= f.text_field :last_name, :required => true, :placeholder => "Last Name*" %>
 
+
             </div>
 
             <%= f.email_field :email, :required => true, :placeholder => "Email*", :class => "email_output"%>
             
         </div>
-
-        <div class="sign-up">
-            <%= f.submit "Sign Up", :id => "submit" %>
-        </div>
-        
-        <% end %>
-    </div>
-
-</div>
 
 
     <% if flash[:message].present? %>
@@ -63,6 +55,17 @@
     </div>
 
     <% end %>
+
+
+        <div class="sign-up">
+            <%= f.submit "Sign Up", :id => "submit" %>
+        </div>
+
+        <% end %>
+    </div>
+
+</div>
+
 
     <% if @user.errors.any? %>
 
