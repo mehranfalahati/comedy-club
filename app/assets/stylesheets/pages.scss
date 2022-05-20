@@ -54,31 +54,23 @@ body {
 }
 .footer {
     display: flex;
-    justify-content: center;
-    align-items: center;
     background-color: #f8f8ff;
 }
 .container {
    padding: 1%;
    box-sizing: border-box;
    width: 100vw;
-   justify-content: center;
-    align-items: center;
 }
 
 .box-left {
     margin-left: 4%;
    width: 22%;
    float: left;
-   justify-content: center;
-    align-items: center;
 }
 .box-right {
     margin-right: 4%;
    width: 22%;
    float: left;
-   justify-content: center;
-    align-items: center;
 }
 .box-center {
     width: 24%;
