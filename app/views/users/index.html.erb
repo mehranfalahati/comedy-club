@@ -11,7 +11,7 @@
             <div class="new-email">
                 <h2 title="New email subscriptions today">New</h2>
                 <% new_email = 0 %>
-                <% @users.each do |user| %>
+                <% @usersAll.each do |user| %>
                     <% if user.created_at > Date.today %>
                         <% new_email += 1 %>
                     <% end%>
@@ -32,7 +32,7 @@
                 <p>Email</p>
             </div>
 
-            <% @users.order(:id).each do |user| %>
+            <% @users.order(id: :desc).each do |user| %>
                 <div class="user-index">
                     <p><%= check_box_tag user.id  %></p>
                     <p><%= user.first_name %></p>
