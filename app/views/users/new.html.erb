@@ -36,14 +36,14 @@
         <div class="form-input">
             <div class="form-top">
 
-                <%= f.text_field :first_name, :required => true, :placeholder => "First Name*" %>
+                <%= f.text_field :first_name, :required => true, :placeholder => "First Name*", :minlength => 2 %>
 
-                <%= f.text_field :last_name, :required => true, :placeholder => "Last Name*" %>
+                <%= f.text_field :last_name, :required => true, :placeholder => "Last Name*", :minlength => 2 %>
 
 
             </div>
 
-            <%= f.email_field :email, :required => true, :placeholder => "Email*", :class => "email_output"%>
+            <%= f.email_field :email, :required => true, :placeholder => "Email*", :class => "email_output" %>
             
         </div>
 
