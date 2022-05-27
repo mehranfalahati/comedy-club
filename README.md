@@ -1,24 +1,19 @@
-# README
+# Comedy Club
+Link: https://comedy-store-2022.herokuapp.com/
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Link to Dashbord: https://comedy-store-2022.herokuapp.com/users
 
-Things you may want to cover:
+this project is a collaboration between the UX-Designer and Software Engineers 
 
-* Ruby version
+* We got the design from the UX-Designer and we start working on the Subscription part as whic is the only part of the project that is interactive with users
 
-* System dependencies
 
-* Configuration
+# Structure
 
-* Database creation
+* The user need to have a valid email which has been done  by regex
+* The user need to have a valid First Name and Family Name
+* The design has been captured by the website: https://www.comedystore.com.au/
+* The website is Mobile response
 
-* Database initialization
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
